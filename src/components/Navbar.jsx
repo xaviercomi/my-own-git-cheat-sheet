@@ -1,9 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CardContext } from '../context/CardContext';
 
-function Navbar({ createCard }) {
+function Navbar() {
   const [description, setDescription] = useState('');
   const [command, setCommand] = useState('');
+  const { createCard } = useContext(CardContext);
 
   function handleSubmit(e) {
     e.preventDefault();

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useContext } from 'react';
+import { CardContext } from '../context/CardContext';
 
-function CheatCard({ card, deleteCard }) {
+function CheatCard({ card }) {
+  const { deleteCard } = useContext(CardContext);
+
   return (
     <div className='container-card-list'>
       <button onClick={() => deleteCard(card.id)}>delete</button>
