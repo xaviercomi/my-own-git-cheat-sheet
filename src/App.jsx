@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import CardList from './components/CardList';
-import CheatCard from './components/CheatCard';
 import { useState, useEffect } from 'react';
-import './styles/cardList.css';
 import { cheatCards } from './data/cheatCards.js';
 
 function App() {
@@ -17,18 +15,21 @@ function App() {
     setListCard([
       ...listCard,
       {
-        id: listCard.length,
+        id: listCard.lenght,
         description: newCard.description,
         command: newCard.command,
       },
     ]);
   }
 
+  function deleteCard(cardId) {
+    setListCard(listCard.filter((card) => card.id !== cardId));
+  }
+
   return (
     <>
-      <Navbar />
-      <CheatCard createCard={createCard} />
-      <CardList listCard={listCard} />
+      <Navbar createCard={createCard} />
+      <CardList listCard={listCard} deleteCard={deleteCard} />
     </>
   );
 }

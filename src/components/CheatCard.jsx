@@ -1,32 +1,14 @@
 import React from 'react';
-import '../styles/cheatCard.css';
-import { useState } from 'react';
 
-function CheatCard({ createCard }) {
-  const [description, setDescription] = useState('');
-  const [command, setCommand] = useState('');
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const newCard = {
-      description: description,
-      command: command,
-    };
-    createCard(newCard);
-  }
-
+function CheatCard({ card, deleteCard }) {
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        placeholder='description...'
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <input
-        placeholder='command...'
-        onChange={(e) => setCommand(e.target.value)}
-      />
-      <button>push</button>
-    </form>
+    <div className='container-card-list'>
+      <button onClick={() => deleteCard(card.id)}>delete</button>
+      <div key='props.key' className='card'>
+        <h3>{card.description}</h3>
+        <h2>{card.command}</h2>
+      </div>
+    </div>
   );
 }
 
