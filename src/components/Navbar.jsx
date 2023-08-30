@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="grid grid-cols-1 mx-auto m-5 w-1/2 p-5 bg-gray-800 justify-center items-center rounded-lg">
+      <div className="grid grid-cols-1 mx-auto m-5 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full p-5 bg-gray-800 justify-center items-center rounded-lg">
         <h1 className="flex flex-column items-center justify-center mb-10 text-slate-400 text-2xl">
           My own Git cheat sheet
         </h1>

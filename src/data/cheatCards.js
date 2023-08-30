@@ -21,12 +21,18 @@ export const cheatCards = [
   },
   {
     id: 4,
-    description: "Send you files to the remote",
+    description: "Send your files to the remote",
     command: "git push origin main",
   },
+
   {
     id: 5,
-    description: "do not clone, connect with",
+    description: "do not clone?, connect with",
     command: "git remote add origin <server>",
+  },
+  {
+    id: 6,
+    description: "the branch tracked on the remote repository",
+    command: "git push -u <remote> <branch>",
   },
 ];

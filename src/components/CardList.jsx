@@ -12,7 +12,10 @@ function CardList() {
 
   return (
     <main>
-      <div key={listCard.lenght} className="grid grid-cols-3 gap-2">
+      <div
+        key={listCard.lenght}
+        className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2"
+      >
         {listCard.map((card) => (
           <CheatCard key={card.id} card={card} />
         ))}
