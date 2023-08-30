@@ -7,14 +7,18 @@ function CardList() {
   const { listCard } = useContext(CardContext);
 
   if (listCard.length === 0) {
-    return <h3 className="text-slate-300">No Git here!</h3>;
+    return (
+      <h3 className="flex text-slate-500 text-lg items-center justify-center">
+        No Git here!
+      </h3>
+    );
   }
 
   return (
     <main>
       <div
         key={listCard.lenght}
-        className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2"
+        className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-2"
       >
         {listCard.map((card) => (
           <CheatCard key={card.id} card={card} />

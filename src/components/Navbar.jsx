@@ -63,11 +63,12 @@ function Navbar() {
           </button>
           <div className="flex flex-row">
             <input
+              placeholder="search by description"
               onChange={handleSearch}
               className="rounded-l-lg h-10 w-full mr-0
                 bg-slate-300  
                 p-3
-               bm-2
+                bm-2
                 w-96
                 text-gray-950
                 placeholder:text-zinc-500"
