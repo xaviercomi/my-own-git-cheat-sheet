@@ -1,32 +1,32 @@
 export const cheatCards = [
   {
     id: 0,
-    description: 'prints the the most used commands',
-    command: 'git -h',
+    description: "Inicialize a repository",
+    command: "git init",
   },
   {
     id: 1,
-    description: 'prints the Git suite version',
-    command: 'git -v',
+    description: "prints the Git suite version",
+    command: "git -v",
   },
   {
     id: 2,
-    description: 'inicialize a repository',
-    command: 'git init',
+    description: "Register all your changes",
+    command: "git add .",
   },
   {
     id: 3,
-    description: 'inicialize a repository',
-    command: 'git init',
+    description: "All your changes to the HEAD",
+    command: 'git commit -m "commit message"',
   },
   {
     id: 4,
-    description: 'inicialize a repository',
-    command: 'git init',
+    description: "Send you files to the remote",
+    command: "git push origin main",
   },
   {
     id: 5,
-    description: 'inicialize a repository',
-    command: 'git init',
+    description: "do not clone, connect with",
+    command: "git remote add origin <server>",
   },
 ];
